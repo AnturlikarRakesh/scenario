@@ -1,0 +1,73 @@
+{
+	"name": "Silver",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Adls_to_adls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Foldername": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().Foldername",
+					"type": "Expression"
+				},
+				"fileSystem": "silver"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FlightID",
+				"type": "String"
+			},
+			{
+				"name": "Airline",
+				"type": "String"
+			},
+			{
+				"name": "Source",
+				"type": "String"
+			},
+			{
+				"name": "Destination",
+				"type": "String"
+			},
+			{
+				"name": "DepartureTime",
+				"type": "String"
+			},
+			{
+				"name": "ArrivalTime",
+				"type": "String"
+			},
+			{
+				"name": "Duration",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "PassengerCount",
+				"type": "String"
+			},
+			{
+				"name": "Fare",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

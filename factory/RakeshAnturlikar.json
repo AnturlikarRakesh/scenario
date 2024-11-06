@@ -1,0 +1,9 @@
+{
+	"name": "RakeshAnturlikar",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a7c1d990-b12b-4376-9d3f-0b5f95881456",
+		"tenantId": "856a6347-d5f7-4662-9653-812f734272cb"
+	}
+}
